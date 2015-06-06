@@ -1,0 +1,1 @@
+http://www.raywenderlich.com/85578/first-core-data-app-using-swift

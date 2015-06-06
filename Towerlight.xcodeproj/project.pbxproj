@@ -14,6 +14,8 @@
 		E7A74E811B2322610051AA7A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A74E801B2322610051AA7A /* Images.xcassets */; };
 		E7A74E841B2322610051AA7A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A74E821B2322610051AA7A /* LaunchScreen.xib */; };
 		E7A74E901B2322610051AA7A /* TowerlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74E8F1B2322610051AA7A /* TowerlightTests.swift */; };
+		E7A74E9A1B2323130051AA7A /* notes in Resources */ = {isa = PBXBuildFile; fileRef = E7A74E991B2323130051AA7A /* notes */; };
+		E7A74E9C1B23231A0051AA7A /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = E7A74E9B1B23231A0051AA7A /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		E7A74E891B2322610051AA7A /* TowerlightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TowerlightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A74E8E1B2322610051AA7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A74E8F1B2322610051AA7A /* TowerlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerlightTests.swift; sourceTree = "<group>"; };
+		E7A74E991B2323130051AA7A /* notes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = notes; sourceTree = "<group>"; };
+		E7A74E9B1B23231A0051AA7A /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 		E7A74E691B2322610051AA7A = {
 			isa = PBXGroup;
 			children = (
+				E7A74E9B1B23231A0051AA7A /* Cartfile */,
+				E7A74E991B2323130051AA7A /* notes */,
 				E7A74E741B2322610051AA7A /* Towerlight */,
 				E7A74E8C1B2322610051AA7A /* TowerlightTests */,
 				E7A74E731B2322610051AA7A /* Products */,
@@ -195,8 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A74E9C1B23231A0051AA7A /* Cartfile in Resources */,
 				E7A74E7F1B2322610051AA7A /* Main.storyboard in Resources */,
 				E7A74E841B2322610051AA7A /* LaunchScreen.xib in Resources */,
+				E7A74E9A1B2323130051AA7A /* notes in Resources */,
 				E7A74E811B2322610051AA7A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
