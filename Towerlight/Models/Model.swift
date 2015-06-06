@@ -30,7 +30,7 @@ class Model {
                 break
             }
         }
-        
+
         return foundModel
     }
 }

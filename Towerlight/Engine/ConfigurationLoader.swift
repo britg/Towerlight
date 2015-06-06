@@ -17,7 +17,7 @@ class ConfigurationLoader {
     
     func loadAll () {
         log.info("Loading all config files")
-        
+
         let path = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent("config")
         let en: NSDirectoryEnumerator = NSFileManager.defaultManager().enumeratorAtPath(path)!
         
