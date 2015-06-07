@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		E76C13591B2386950066CCD8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C13581B2386950066CCD8 /* libsqlite3.dylib */; };
 		E76C135B1B2387660066CCD8 /* towerlight.db in Resources */ = {isa = PBXBuildFile; fileRef = E76C135A1B2387660066CCD8 /* towerlight.db */; };
+		E76C135D1B246C960066CCD8 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C135C1B246C960066CCD8 /* DataStore.swift */; };
+		E76C135F1B2476F50066CCD8 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C135E1B2476F50066CCD8 /* PlayerManager.swift */; };
+		E76C13611B24771A0066CCD8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C13601B24771A0066CCD8 /* Player.swift */; };
+		E76C13631B2478640066CCD8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C13621B2478640066CCD8 /* Character.swift */; };
 		E7A74E781B2322610051AA7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74E771B2322610051AA7A /* AppDelegate.swift */; };
 		E7A74E7A1B2322610051AA7A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74E791B2322610051AA7A /* FirstViewController.swift */; };
 		E7A74E7C1B2322610051AA7A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74E7B1B2322610051AA7A /* SecondViewController.swift */; };
@@ -42,6 +46,10 @@
 /* Begin PBXFileReference section */
 		E76C13581B2386950066CCD8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E76C135A1B2387660066CCD8 /* towerlight.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = towerlight.db; sourceTree = "<group>"; };
+		E76C135C1B246C960066CCD8 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = ../Models/DataStore.swift; sourceTree = "<group>"; };
+		E76C135E1B2476F50066CCD8 /* PlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		E76C13601B24771A0066CCD8 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Models/Player.swift; sourceTree = "<group>"; };
+		E76C13621B2478640066CCD8 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Models/Character.swift; sourceTree = "<group>"; };
 		E7A74E721B2322610051AA7A /* Towerlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towerlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A74E761B2322610051AA7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A74E771B2322610051AA7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,8 +187,10 @@
 		E7A74EA41B23623C0051AA7A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				E76C135C1B246C960066CCD8 /* DataStore.swift */,
 				E7A74EA51B23623C0051AA7A /* ConfigurationLoader.swift */,
 				E7A74EA61B23623C0051AA7A /* EquipmentGenerator.swift */,
+				E76C135E1B2476F50066CCD8 /* PlayerManager.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -190,6 +200,8 @@
 			children = (
 				E7A74EAC1B23637E0051AA7A /* Model.swift */,
 				E7A74EAE1B23643D0051AA7A /* Slot.swift */,
+				E76C13601B24771A0066CCD8 /* Player.swift */,
+				E76C13621B2478640066CCD8 /* Character.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -369,11 +381,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76C13631B2478640066CCD8 /* Character.swift in Sources */,
 				E7A74EAD1B23637E0051AA7A /* Model.swift in Sources */,
 				E7A74EC71B2369D90051AA7A /* fopenCompatibilityFix.c in Sources */,
 				E7A74EA81B23623C0051AA7A /* EquipmentGenerator.swift in Sources */,
+				E76C135D1B246C960066CCD8 /* DataStore.swift in Sources */,
+				E76C13611B24771A0066CCD8 /* Player.swift in Sources */,
 				E7A74E7C1B2322610051AA7A /* SecondViewController.swift in Sources */,
 				E7A74E781B2322610051AA7A /* AppDelegate.swift in Sources */,
+				E76C135F1B2476F50066CCD8 /* PlayerManager.swift in Sources */,
 				E7A74E7A1B2322610051AA7A /* FirstViewController.swift in Sources */,
 				E7A74EA01B2359D80051AA7A /* SwiftyJSON.swift in Sources */,
 				E7A74EA71B23623C0051AA7A /* ConfigurationLoader.swift in Sources */,

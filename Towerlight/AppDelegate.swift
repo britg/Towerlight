@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        ensureDatabase()
+        DataStore.ensureDatabase()
         let loader = ConfigurationLoader()
         loader.loadAll()
+        let playerManager = PlayerManager()
+        playerManager.ensurePlayer()
         return true
     }
 
@@ -44,45 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    func databaseURL() -> NSURL? {
-
-        let fileManager = NSFileManager.defaultManager()
-
-        let urls = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-
-        if let documentDirectory: NSURL = urls.first as? NSURL {
-            // This is where the database should be in the documents directory
-            let finalDatabaseURL = documentDirectory.URLByAppendingPathComponent("towerlight.db")
-
-            if finalDatabaseURL.checkResourceIsReachableAndReturnError(nil) {
-                // The file already exists, so just return the URL
-                return finalDatabaseURL
-            } else {
-                // Copy the initial file from the application bundle to the documents directory
-                if let bundleURL = NSBundle.mainBundle().URLForResource("towerlight", withExtension: "db") {
-                    let success = fileManager.copyItemAtURL(bundleURL, toURL: finalDatabaseURL, error: nil)
-                    if success {
-                        return finalDatabaseURL
-                    } else {
-                        println("Couldn't copy file to final location!")
-                    }
-                } else {
-                    println("Couldn't find initial database in the bundle!")
-                }
-            }
-        } else {
-            println("Couldn't get documents directory!")
-        }
-        
-        return nil
-    }
-
-    func ensureDatabase () {
-        let dbUrl = databaseURL()
-        let nanoStore = NSFNanoStore.createAndOpenStoreWithType(NSFPersistentStoreType, path: dbUrl!.path, error: nil)
-        log.info("Nano store is \(nanoStore)")
     }
 
 }

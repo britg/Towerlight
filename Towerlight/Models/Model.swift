@@ -9,28 +9,13 @@
 import Foundation
 
 class Model {
-    
-    static var collection: [Model] = []
-    
-    let slug: String
-    let name: String
 
-    required init (jsonData: JSON) {
-        log.info("Initializing model with \(jsonData)")
-        self.slug = jsonData["slug"].string!
-        self.name = jsonData["name"].string!
+    class func find (type: String, withKey: String) -> NSFNanoObject? {
+        let search = NSFNanoSearch(store: DataStore.store)
+        search.key = withKey
+//        search.match = NSFEqualTo
+        let results: [String: NSFNanoObject] = search.searchObjectsWithReturnType(NSFReturnObjects, error: nil) as! [String: NSFNanoObject]
+        return results[withKey]
     }
 
-    class func slug (slug: String) -> Model? {
-        log.info("Calling this method with type of \(self)")
-        var foundModel: Model?
-        for model in collection {
-            if model.slug == slug && model.dynamicType === self {
-                foundModel = model
-                break
-            }
-        }
-
-        return foundModel
-    }
 }

@@ -2,7 +2,7 @@
 
 Tagline: An endless lootpunk adventure.
 
-"A timeworn adventurer climbs through the night drawn by the tower light."
+"A timeworn traveller climbs through the night drawn by the tower light."
 
 Single Player. You are climbing a tower. The reasons why you are climbing this tower are unknown. Each level of the tower is synomymous with player level. The process of climbing the tower is automated and real-time.
 

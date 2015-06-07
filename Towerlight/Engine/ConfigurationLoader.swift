@@ -11,7 +11,7 @@ import XCGLogger
 
 class ConfigurationLoader {
     
-    let modelMapping: [String: Model.Type] = [
+    let modelMapping: [String: NSFNanoObject.Type] = [
         "Slot": Slot.self
     ]
     
@@ -30,26 +30,22 @@ class ConfigurationLoader {
                 loadFile(fullPath)
             }
         }
-        
-        // Looking up by slug
-        log.info("Collection of slots is \(Slot.collection)")
-        if let slot = Slot.slug("dex") {
-            log.info("Look up by slug is \(slot.slug)")
-        }
-        
-        // Creating Equipment
-//        let equipmentGenerator = EquipmentGenerator()
-//        let equipment = equipmentGenerator.generate()
-//        log.info("Equipment is \(equipment)")
+
+//        DataStore.store.closeWithError(nil)
+
+        let mainHand = Model.find("Slot", withKey: "main_hand")
+        log.info("main hand is \(mainHand) \(mainHand.dynamicType)")
+
+
     }
     
     func loadFile (path: String) {
         let data = NSData(contentsOfFile: path)
         let contents = JSON(data: data!)
         if let type = contents["type"].string {
-            if let modelClass = modelMapping[type] {
-                let modelInst = modelClass(jsonData: contents)
-                Model.collection.append(modelInst)
+            if let modelType = modelMapping[type] {
+                let modelInst = modelType(dictionary: contents.dictionaryObject, key: contents["slug"].string!)
+                DataStore.store.addObject(modelInst, error: nil)
                 log.info("model inst is \(modelInst)")
             }
         }

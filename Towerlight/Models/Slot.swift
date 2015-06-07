@@ -8,6 +8,10 @@
 
 import Foundation
 
-class Slot: Model {
+class Slot: NSFNanoObject {
+
+    lazy var slug: String = {
+        return self.objectForKey("slug") as! String
+    }()
     
 }
