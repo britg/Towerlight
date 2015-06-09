@@ -44,12 +44,11 @@ class ConfigurationLoader {
         let contents = JSON(data: data!)
         if let type = contents["type"].string {
             var obj: Object? = nil
-            log.info("type is \(type)")
             switch type {
                 case "Slot":
-                    log.info("Generating slot with \(contents)")
                     obj = Slot.generate(contents) as Object
-                    log.info("slot is \(obj)")
+                case "EquipmentClass":
+                    obj = EquipmentClass.generate(contents) as Object
                 default:
                     log.info("type not defined \(type)")
             }

@@ -28,6 +28,7 @@
 		E7A74EAA1B2362B30051AA7A /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A74EA91B2362B30051AA7A /* XCGLogger.framework */; };
 		E7A74EAD1B23637E0051AA7A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74EAC1B23637E0051AA7A /* Model.swift */; };
 		E7CA76081B251A0B00B2EF8A /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA76071B251A0B00B2EF8A /* Slot.swift */; };
+		E7CA760A1B2672FD00B2EF8A /* EquipmentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA76091B2672FD00B2EF8A /* EquipmentClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E7A74EAC1B23637E0051AA7A /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Models/Model.swift; sourceTree = "<group>"; };
 		E7A74EC91B236A160051AA7A /* Towerlight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Towerlight-Bridging-Header.h"; sourceTree = "<group>"; };
 		E7CA76071B251A0B00B2EF8A /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Slot.swift; path = Models/Slot.swift; sourceTree = "<group>"; };
+		E7CA76091B2672FD00B2EF8A /* EquipmentClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EquipmentClass.swift; path = Models/EquipmentClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				E76C13601B24771A0066CCD8 /* Player.swift */,
 				E76C13621B2478640066CCD8 /* Character.swift */,
 				E7CA76071B251A0B00B2EF8A /* Slot.swift */,
+				E7CA76091B2672FD00B2EF8A /* EquipmentClass.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 		E7A74E6A1B2322610051AA7A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Brit Gardner";
 				TargetAttributes = {
@@ -310,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E76C13631B2478640066CCD8 /* Character.swift in Sources */,
+				E7CA760A1B2672FD00B2EF8A /* EquipmentClass.swift in Sources */,
 				E7A74EAD1B23637E0051AA7A /* Model.swift in Sources */,
 				E7A74EA81B23623C0051AA7A /* EquipmentGenerator.swift in Sources */,
 				E76C13611B24771A0066CCD8 /* Player.swift in Sources */,

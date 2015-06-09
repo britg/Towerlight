@@ -1,5 +1,5 @@
 {
     "type": "EquipmentClass",
-    "name": "Sword",
-    "slug": "sword"
+    "key": "sword",
+    "name": "Sword"
 }
