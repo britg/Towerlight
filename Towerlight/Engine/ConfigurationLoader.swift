@@ -8,13 +8,12 @@
 
 import Foundation
 import XCGLogger
+import RealmSwift
 
 class ConfigurationLoader {
-    
-    let modelMapping: [String: NSFNanoObject.Type] = [
-        "Slot": Slot.self
-    ]
-    
+
+    var objs: [Object] = [Object]()
+
     func loadAll () {
         log.info("Loading all config files")
 
@@ -31,11 +30,12 @@ class ConfigurationLoader {
             }
         }
 
-//        DataStore.store.closeWithError(nil)
-
-        let mainHand = Model.find("Slot", withKey: "main_hand")
-        log.info("main hand is \(mainHand) \(mainHand.dynamicType)")
-
+        let realm = Realm()
+        realm.write {
+            for obj in self.objs {
+                realm.add(obj, update: true)
+            }
+        }
 
     }
     
@@ -43,11 +43,21 @@ class ConfigurationLoader {
         let data = NSData(contentsOfFile: path)
         let contents = JSON(data: data!)
         if let type = contents["type"].string {
-            if let modelType = modelMapping[type] {
-                let modelInst = modelType(dictionary: contents.dictionaryObject, key: contents["slug"].string!)
-                DataStore.store.addObject(modelInst, error: nil)
-                log.info("model inst is \(modelInst)")
+            var obj: Object? = nil
+            log.info("type is \(type)")
+            switch type {
+                case "Slot":
+                    log.info("Generating slot with \(contents)")
+                    obj = Slot.generate(contents) as Object
+                    log.info("slot is \(obj)")
+                default:
+                    log.info("type not defined \(type)")
+            }
+            if obj != nil {
+                objs.append(obj!)
             }
         }
+
+
     }
 }

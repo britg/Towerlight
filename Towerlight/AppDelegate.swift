@@ -8,6 +8,7 @@
 
 import UIKit
 import XCGLogger
+import RealmSwift
 
 let log = XCGLogger.defaultInstance()
 
@@ -18,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        DataStore.ensureDatabase()
+//        NSFileManager.defaultManager().removeItemAtPath(Realm.defaultPath, error: nil)
+        let realm = Realm()
+        log.info(realm.path)
         let loader = ConfigurationLoader()
         loader.loadAll()
         let playerManager = PlayerManager()

@@ -26,3 +26,6 @@ Names
     - Towerlight
 
 Loot system from concept.md
+
+Shadow Market - async multiplayer market
+

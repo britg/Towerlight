@@ -8,6 +8,5 @@
 
 #ifndef Towerlight_Towerlight_Briding_Header_h
 #define Towerlight_Towerlight_Briding_Header_h
-#import "NanoStore.h"
 
 #endif

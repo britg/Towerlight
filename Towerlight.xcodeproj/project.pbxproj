@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E76C13591B2386950066CCD8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C13581B2386950066CCD8 /* libsqlite3.dylib */; };
-		E76C135B1B2387660066CCD8 /* towerlight.db in Resources */ = {isa = PBXBuildFile; fileRef = E76C135A1B2387660066CCD8 /* towerlight.db */; };
-		E76C135D1B246C960066CCD8 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C135C1B246C960066CCD8 /* DataStore.swift */; };
 		E76C135F1B2476F50066CCD8 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C135E1B2476F50066CCD8 /* PlayerManager.swift */; };
 		E76C13611B24771A0066CCD8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C13601B24771A0066CCD8 /* Player.swift */; };
 		E76C13631B2478640066CCD8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C13621B2478640066CCD8 /* Character.swift */; };
+		E76C13661B250B0F0066CCD8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C13641B250B0F0066CCD8 /* Realm.framework */; };
+		E76C13671B250B0F0066CCD8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C13651B250B0F0066CCD8 /* RealmSwift.framework */; };
 		E7A74E781B2322610051AA7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74E771B2322610051AA7A /* AppDelegate.swift */; };
 		E7A74E7A1B2322610051AA7A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74E791B2322610051AA7A /* FirstViewController.swift */; };
 		E7A74E7C1B2322610051AA7A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74E7B1B2322610051AA7A /* SecondViewController.swift */; };
@@ -28,9 +27,7 @@
 		E7A74EA81B23623C0051AA7A /* EquipmentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74EA61B23623C0051AA7A /* EquipmentGenerator.swift */; };
 		E7A74EAA1B2362B30051AA7A /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A74EA91B2362B30051AA7A /* XCGLogger.framework */; };
 		E7A74EAD1B23637E0051AA7A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74EAC1B23637E0051AA7A /* Model.swift */; };
-		E7A74EAF1B23643D0051AA7A /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A74EAE1B23643D0051AA7A /* Slot.swift */; };
-		E7A74EC71B2369D90051AA7A /* fopenCompatibilityFix.c in Sources */ = {isa = PBXBuildFile; fileRef = E7A74EB81B2369D90051AA7A /* fopenCompatibilityFix.c */; };
-		E7A74EC81B2369D90051AA7A /* libnanostore2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A74EC61B2369D90051AA7A /* libnanostore2.a */; };
+		E7CA76081B251A0B00B2EF8A /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CA76071B251A0B00B2EF8A /* Slot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E76C13581B2386950066CCD8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		E76C135A1B2387660066CCD8 /* towerlight.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = towerlight.db; sourceTree = "<group>"; };
-		E76C135C1B246C960066CCD8 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = ../Models/DataStore.swift; sourceTree = "<group>"; };
 		E76C135E1B2476F50066CCD8 /* PlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		E76C13601B24771A0066CCD8 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Models/Player.swift; sourceTree = "<group>"; };
 		E76C13621B2478640066CCD8 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Models/Character.swift; sourceTree = "<group>"; };
+		E76C13641B250B0F0066CCD8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		E76C13651B250B0F0066CCD8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		E7A74E721B2322610051AA7A /* Towerlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Towerlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A74E761B2322610051AA7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A74E771B2322610051AA7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,22 +65,8 @@
 		E7A74EA61B23623C0051AA7A /* EquipmentGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentGenerator.swift; sourceTree = "<group>"; };
 		E7A74EA91B2362B30051AA7A /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		E7A74EAC1B23637E0051AA7A /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Models/Model.swift; sourceTree = "<group>"; };
-		E7A74EAE1B23643D0051AA7A /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Slot.swift; path = Models/Slot.swift; sourceTree = "<group>"; };
-		E7A74EB81B2369D90051AA7A /* fopenCompatibilityFix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fopenCompatibilityFix.c; sourceTree = "<group>"; };
-		E7A74EB91B2369D90051AA7A /* NanoStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NanoStore.h; sourceTree = "<group>"; };
-		E7A74EBA1B2369D90051AA7A /* NSFNanoBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoBag.h; sourceTree = "<group>"; };
-		E7A74EBB1B2369D90051AA7A /* NSFNanoEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoEngine.h; sourceTree = "<group>"; };
-		E7A74EBC1B2369D90051AA7A /* NSFNanoExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoExpression.h; sourceTree = "<group>"; };
-		E7A74EBD1B2369D90051AA7A /* NSFNanoGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoGlobals.h; sourceTree = "<group>"; };
-		E7A74EBE1B2369D90051AA7A /* NSFNanoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoObject.h; sourceTree = "<group>"; };
-		E7A74EBF1B2369D90051AA7A /* NSFNanoObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoObjectProtocol.h; sourceTree = "<group>"; };
-		E7A74EC01B2369D90051AA7A /* NSFNanoPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoPredicate.h; sourceTree = "<group>"; };
-		E7A74EC11B2369D90051AA7A /* NSFNanoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoResult.h; sourceTree = "<group>"; };
-		E7A74EC21B2369D90051AA7A /* NSFNanoSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoSearch.h; sourceTree = "<group>"; };
-		E7A74EC31B2369D90051AA7A /* NSFNanoSortDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoSortDescriptor.h; sourceTree = "<group>"; };
-		E7A74EC41B2369D90051AA7A /* NSFNanoStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFNanoStore.h; sourceTree = "<group>"; };
-		E7A74EC61B2369D90051AA7A /* libnanostore2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnanostore2.a; sourceTree = "<group>"; };
 		E7A74EC91B236A160051AA7A /* Towerlight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Towerlight-Bridging-Header.h"; sourceTree = "<group>"; };
+		E7CA76071B251A0B00B2EF8A /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Slot.swift; path = Models/Slot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E76C13591B2386950066CCD8 /* libsqlite3.dylib in Frameworks */,
-				E7A74EC81B2369D90051AA7A /* libnanostore2.a in Frameworks */,
+				E76C13661B250B0F0066CCD8 /* Realm.framework in Frameworks */,
+				E76C13671B250B0F0066CCD8 /* RealmSwift.framework in Frameworks */,
 				E7A74EAA1B2362B30051AA7A /* XCGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,8 +93,8 @@
 		E7A74E691B2322610051AA7A = {
 			isa = PBXGroup;
 			children = (
-				E76C135A1B2387660066CCD8 /* towerlight.db */,
-				E76C13581B2386950066CCD8 /* libsqlite3.dylib */,
+				E76C13641B250B0F0066CCD8 /* Realm.framework */,
+				E76C13651B250B0F0066CCD8 /* RealmSwift.framework */,
 				E7A74EA91B2362B30051AA7A /* XCGLogger.framework */,
 				E7A74E9B1B23231A0051AA7A /* Cartfile */,
 				E7A74EA21B23622B0051AA7A /* config */,
@@ -178,7 +160,6 @@
 		E7A74EA11B2359E50051AA7A /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				E7A74EB41B2369D90051AA7A /* Distribution */,
 				E7A74E9F1B2359D80051AA7A /* SwiftyJSON.swift */,
 			);
 			name = lib;
@@ -187,7 +168,6 @@
 		E7A74EA41B23623C0051AA7A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				E76C135C1B246C960066CCD8 /* DataStore.swift */,
 				E7A74EA51B23623C0051AA7A /* ConfigurationLoader.swift */,
 				E7A74EA61B23623C0051AA7A /* EquipmentGenerator.swift */,
 				E76C135E1B2476F50066CCD8 /* PlayerManager.swift */,
@@ -199,64 +179,11 @@
 			isa = PBXGroup;
 			children = (
 				E7A74EAC1B23637E0051AA7A /* Model.swift */,
-				E7A74EAE1B23643D0051AA7A /* Slot.swift */,
 				E76C13601B24771A0066CCD8 /* Player.swift */,
 				E76C13621B2478640066CCD8 /* Character.swift */,
+				E7CA76071B251A0B00B2EF8A /* Slot.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		E7A74EB41B2369D90051AA7A /* Distribution */ = {
-			isa = PBXGroup;
-			children = (
-				E7A74EB51B2369D90051AA7A /* NanoStore2 */,
-			);
-			path = Distribution;
-			sourceTree = "<group>";
-		};
-		E7A74EB51B2369D90051AA7A /* NanoStore2 */ = {
-			isa = PBXGroup;
-			children = (
-				E7A74EB61B2369D90051AA7A /* Release */,
-			);
-			path = NanoStore2;
-			sourceTree = "<group>";
-		};
-		E7A74EB61B2369D90051AA7A /* Release */ = {
-			isa = PBXGroup;
-			children = (
-				E7A74EB71B2369D90051AA7A /* Headers */,
-				E7A74EC51B2369D90051AA7A /* Library */,
-			);
-			path = Release;
-			sourceTree = "<group>";
-		};
-		E7A74EB71B2369D90051AA7A /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				E7A74EB81B2369D90051AA7A /* fopenCompatibilityFix.c */,
-				E7A74EB91B2369D90051AA7A /* NanoStore.h */,
-				E7A74EBA1B2369D90051AA7A /* NSFNanoBag.h */,
-				E7A74EBB1B2369D90051AA7A /* NSFNanoEngine.h */,
-				E7A74EBC1B2369D90051AA7A /* NSFNanoExpression.h */,
-				E7A74EBD1B2369D90051AA7A /* NSFNanoGlobals.h */,
-				E7A74EBE1B2369D90051AA7A /* NSFNanoObject.h */,
-				E7A74EBF1B2369D90051AA7A /* NSFNanoObjectProtocol.h */,
-				E7A74EC01B2369D90051AA7A /* NSFNanoPredicate.h */,
-				E7A74EC11B2369D90051AA7A /* NSFNanoResult.h */,
-				E7A74EC21B2369D90051AA7A /* NSFNanoSearch.h */,
-				E7A74EC31B2369D90051AA7A /* NSFNanoSortDescriptor.h */,
-				E7A74EC41B2369D90051AA7A /* NSFNanoStore.h */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
-		E7A74EC51B2369D90051AA7A /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				E7A74EC61B2369D90051AA7A /* libnanostore2.a */,
-			);
-			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +268,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A74E9C1B23231A0051AA7A /* Cartfile in Resources */,
-				E76C135B1B2387660066CCD8 /* towerlight.db in Resources */,
 				E7A74E7F1B2322610051AA7A /* Main.storyboard in Resources */,
 				E7A74E841B2322610051AA7A /* LaunchScreen.xib in Resources */,
 				E7A74E9A1B2323130051AA7A /* notes in Resources */,
@@ -367,6 +293,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/XCGLogger.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
@@ -383,9 +311,7 @@
 			files = (
 				E76C13631B2478640066CCD8 /* Character.swift in Sources */,
 				E7A74EAD1B23637E0051AA7A /* Model.swift in Sources */,
-				E7A74EC71B2369D90051AA7A /* fopenCompatibilityFix.c in Sources */,
 				E7A74EA81B23623C0051AA7A /* EquipmentGenerator.swift in Sources */,
-				E76C135D1B246C960066CCD8 /* DataStore.swift in Sources */,
 				E76C13611B24771A0066CCD8 /* Player.swift in Sources */,
 				E7A74E7C1B2322610051AA7A /* SecondViewController.swift in Sources */,
 				E7A74E781B2322610051AA7A /* AppDelegate.swift in Sources */,
@@ -393,7 +319,7 @@
 				E7A74E7A1B2322610051AA7A /* FirstViewController.swift in Sources */,
 				E7A74EA01B2359D80051AA7A /* SwiftyJSON.swift in Sources */,
 				E7A74EA71B23623C0051AA7A /* ConfigurationLoader.swift in Sources */,
-				E7A74EAF1B23643D0051AA7A /* Slot.swift in Sources */,
+				E7CA76081B251A0B00B2EF8A /* Slot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

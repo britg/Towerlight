@@ -1,5 +1,5 @@
 {
     "type": "Slot",
-    "name": "Main Hand",
-    "slug": "main_hand"
+    "key": "main_hand",
+    "name": "Main Hand"
 }

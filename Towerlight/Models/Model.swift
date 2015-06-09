@@ -10,12 +10,4 @@ import Foundation
 
 class Model {
 
-    class func find (type: String, withKey: String) -> NSFNanoObject? {
-        let search = NSFNanoSearch(store: DataStore.store)
-        search.key = withKey
-//        search.match = NSFEqualTo
-        let results: [String: NSFNanoObject] = search.searchObjectsWithReturnType(NSFReturnObjects, error: nil) as! [String: NSFNanoObject]
-        return results[withKey]
-    }
-
 }

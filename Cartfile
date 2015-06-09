@@ -1,3 +1,2 @@
-github "SwiftyJSON/SwiftyJSON"
 github "DaveWoodCom/XCGLogger"
-github "tciuro/NanoStore"
+github "realm/realm-cocoa"
