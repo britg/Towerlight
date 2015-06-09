@@ -1,5 +1,5 @@
 //
-//  CharacterSlot.swift
+//  CharacterStat.swift
 //  Towerlight
 //
 //  Created by Brit Gardner on 6/9/15.
@@ -9,8 +9,9 @@
 import Foundation
 import RealmSwift
 
-class CharacterSlot: Object {
-    dynamic var slot: Slot?
+class CharacterStat: Object {
+
     dynamic var character: Character?
-    dynamic var equipment: Equipment?
+    dynamic var stat: Stat?
+    dynamic var value: Double = 0.0
 }

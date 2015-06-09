@@ -13,5 +13,7 @@ class Character: Object {
 
     dynamic var name = ""
     dynamic var characterClass: CharacterClass?
-    
+    let slots = List<CharacterSlot>()
+    let stats = List<CharacterStat>()
+
 }

@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Player: Model {
+class Player: Object {
+
+    let characters = List<Character>()
 
 }

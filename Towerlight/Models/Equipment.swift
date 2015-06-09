@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
+
+class Equipment: Object {
+    dynamic var name = ""
+    dynamic var slot: Slot?
+    dynamic var characterSlot: CharacterSlot?
+}
