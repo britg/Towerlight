@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Character {
+class Character: Object {
+
+    dynamic var name = ""
+    dynamic var characterClass: CharacterClass?
     
 }

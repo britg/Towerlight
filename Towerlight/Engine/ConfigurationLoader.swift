@@ -12,7 +12,7 @@ import RealmSwift
 
 class ConfigurationLoader {
 
-    var objs: [Object] = [Object]()
+    var objs: [Model] = [Model]()
 
     func loadAll () {
         log.info("Loading all config files")
@@ -43,20 +43,23 @@ class ConfigurationLoader {
         let data = NSData(contentsOfFile: path)
         let contents = JSON(data: data!)
         if let type = contents["type"].string {
-            var obj: Object? = nil
+            var obj: Model? = nil
             switch type {
                 case "Slot":
-                    obj = Slot.generate(contents) as Object
+                    obj = Slot()
                 case "EquipmentClass":
-                    obj = EquipmentClass.generate(contents) as Object
+                    obj = EquipmentClass()
+                case "Stat":
+                    obj = Stat()
+                case "CharacterClass":
+                    obj = CharacterClass()
                 default:
                     log.info("type not defined \(type)")
             }
             if obj != nil {
+                obj!.build(contents)
                 objs.append(obj!)
             }
         }
-
-
     }
 }

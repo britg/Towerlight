@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 //        NSFileManager.defaultManager().removeItemAtPath(Realm.defaultPath, error: nil)
+//        abort()
+
         let realm = Realm()
         log.info(realm.path)
         let loader = ConfigurationLoader()

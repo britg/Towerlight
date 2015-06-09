@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Model {
+class Model: Object {
+
+    func build (json: JSON) {
+        
+    }
 
 }

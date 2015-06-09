@@ -1,6 +1,6 @@
 {
     "type": "Stat",
-    "slug": "dex",
+    "key": "dex",
     "name": "Dexterity",
     "abbr": "Dex"
 }

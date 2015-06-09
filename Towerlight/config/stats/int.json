@@ -1,6 +1,6 @@
 {
     "type": "Stat",
-    "slug": "int",
+    "key": "int",
     "name": "Intelligence",
     "abbr": "Int"
 }

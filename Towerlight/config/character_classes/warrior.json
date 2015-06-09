@@ -1,5 +1,5 @@
 {
     "type": "CharacterClass",
-    "name": "Warrior",
-    "slug": "warrior"
+    "key": "warrior",
+    "name": "Warrior"
 }

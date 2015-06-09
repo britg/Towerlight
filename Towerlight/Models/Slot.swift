@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Slot: Object {
+class Slot: Model {
     dynamic var key = ""
     dynamic var name = ""
 
@@ -17,11 +17,9 @@ class Slot: Object {
         return "key"
     }
 
-    class func generate (json: JSON) -> Slot {
-        let slot = Slot()
-        slot.key = json["key"].string!
-        slot.name = json["name"].string!
-        return slot
+    override func build (json: JSON) {
+        self.key = json["key"].string!
+        self.name = json["name"].string!
     }
 
 }

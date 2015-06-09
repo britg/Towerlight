@@ -1,19 +1,19 @@
 //
-//  EquipmentClass.swift
+//  CharacterClass.swift
 //  Towerlight
 //
-//  Created by Brit Gardner on 6/8/15.
+//  Created by Brit Gardner on 6/9/15.
 //  Copyright (c) 2015 Brit Gardner. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-class EquipmentClass: Model {
+class CharacterClass: Model {
     dynamic var key = ""
     dynamic var name = ""
 
-    override static func primaryKey() -> String? {
+    override class func primaryKey() -> String? {
         return "key"
     }
 
@@ -21,5 +21,4 @@ class EquipmentClass: Model {
         self.key = json["key"].string!
         self.name = json["name"].string!
     }
-
 }
