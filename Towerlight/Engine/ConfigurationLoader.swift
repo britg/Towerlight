@@ -12,9 +12,26 @@ import RealmSwift
 
 class ConfigurationLoader {
 
+    var loadedConfigs: [String: JSON] = [String: JSON]()
     var objs: [Model] = [Model]()
 
-    func loadAll () {
+    let configLoadingOrder = ["Stat", "Slot", "EquipmentClass", "CharacterClass"]
+
+    func bootstrap () {
+        loadConfiguration()
+        loadPlayer()
+    }
+
+    func loadPlayer () {
+        let playerLoader = PlayerLoader()
+        playerLoader.ensurePlayer()
+    }
+
+    func loadConfiguration () {
+
+        let realm = Realm()
+        log.info(realm.path)
+
         log.info("Loading all config files")
 
         let path = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent("config")
@@ -30,36 +47,47 @@ class ConfigurationLoader {
             }
         }
 
-        let realm = Realm()
+        parseConfigs()
+
         realm.write {
             for obj in self.objs {
                 realm.add(obj, update: true)
             }
         }
-
     }
     
     func loadFile (path: String) {
         let data = NSData(contentsOfFile: path)
         let contents = JSON(data: data!)
+
         if let type = contents["type"].string {
-            var obj: Model? = nil
-            switch type {
-                case "Slot":
-                    obj = Slot()
-                case "EquipmentClass":
-                    obj = EquipmentClass()
-                case "Stat":
-                    obj = Stat()
-                case "CharacterClass":
-                    obj = CharacterClass()
-                default:
-                    log.info("type not defined \(type)")
-            }
-            if obj != nil {
-                obj!.build(contents)
-                objs.append(obj!)
-            }
+            loadedConfigs[type] = contents
+        }
+    }
+
+    func parseConfigs () {
+        for type in configLoadingOrder {
+            parseConfig(type, loadedConfigs[type]!)
+        }
+    }
+
+    func parseConfig (type: String, _ config: JSON) {
+        var obj: Model? = nil
+        switch type {
+            case "Slot":
+                obj = Slot()
+            case "EquipmentClass":
+                obj = EquipmentClass()
+            case "Stat":
+                obj = Stat()
+            case "CharacterClass":
+                obj = CharacterClass()
+            default:
+                log.info("type not defined \(type)")
+        }
+        if obj != nil {
+            obj!.build(config)
+            objs.append(obj!)
         }
     }
 }

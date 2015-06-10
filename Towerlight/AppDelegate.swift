@@ -22,12 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        NSFileManager.defaultManager().removeItemAtPath(Realm.defaultPath, error: nil)
 //        abort()
 
-        let realm = Realm()
-        log.info(realm.path)
         let loader = ConfigurationLoader()
-        loader.loadAll()
-        let playerManager = PlayerManager()
-        playerManager.ensurePlayer()
+        loader.bootstrap()
+        
         return true
     }
 

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E76C135F1B2476F50066CCD8 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C135E1B2476F50066CCD8 /* PlayerManager.swift */; };
+		E76C135F1B2476F50066CCD8 /* PlayerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C135E1B2476F50066CCD8 /* PlayerLoader.swift */; };
 		E76C13611B24771A0066CCD8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C13601B24771A0066CCD8 /* Player.swift */; };
 		E76C13631B2478640066CCD8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76C13621B2478640066CCD8 /* Character.swift */; };
 		E76C13661B250B0F0066CCD8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76C13641B250B0F0066CCD8 /* Realm.framework */; };
@@ -34,6 +34,7 @@
 		E7CBD2601B27709000594569 /* CharacterSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CBD25F1B27709000594569 /* CharacterSlot.swift */; };
 		E7CBD2621B2770E600594569 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CBD2611B2770E600594569 /* Equipment.swift */; };
 		E7CBD2641B2773C300594569 /* CharacterStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CBD2631B2773C300594569 /* CharacterStat.swift */; };
+		E7CBD2661B27D22B00594569 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CBD2651B27D22B00594569 /* Setting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E76C135E1B2476F50066CCD8 /* PlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		E76C135E1B2476F50066CCD8 /* PlayerLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLoader.swift; sourceTree = "<group>"; };
 		E76C13601B24771A0066CCD8 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Models/Player.swift; sourceTree = "<group>"; };
 		E76C13621B2478640066CCD8 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Character.swift; path = Models/Character.swift; sourceTree = "<group>"; };
 		E76C13641B250B0F0066CCD8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		E7CBD25F1B27709000594569 /* CharacterSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterSlot.swift; path = Models/CharacterSlot.swift; sourceTree = "<group>"; };
 		E7CBD2611B2770E600594569 /* Equipment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Equipment.swift; path = Models/Equipment.swift; sourceTree = "<group>"; };
 		E7CBD2631B2773C300594569 /* CharacterStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterStat.swift; path = Models/CharacterStat.swift; sourceTree = "<group>"; };
+		E7CBD2651B27D22B00594569 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Setting.swift; path = Towerlight/Models/Setting.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +184,7 @@
 			children = (
 				E7A74EA51B23623C0051AA7A /* ConfigurationLoader.swift */,
 				E7A74EA61B23623C0051AA7A /* EquipmentGenerator.swift */,
-				E76C135E1B2476F50066CCD8 /* PlayerManager.swift */,
+				E76C135E1B2476F50066CCD8 /* PlayerLoader.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -190,6 +192,7 @@
 		E7A74EAB1B23633C0051AA7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E7CBD2651B27D22B00594569 /* Setting.swift */,
 				E7A74EAC1B23637E0051AA7A /* Model.swift */,
 				E76C13601B24771A0066CCD8 /* Player.swift */,
 				E7CBD2631B2773C300594569 /* CharacterStat.swift */,
@@ -336,11 +339,12 @@
 				E7A74EAD1B23637E0051AA7A /* Model.swift in Sources */,
 				E7A74EA81B23623C0051AA7A /* EquipmentGenerator.swift in Sources */,
 				E7CBD2641B2773C300594569 /* CharacterStat.swift in Sources */,
+				E7CBD2661B27D22B00594569 /* Setting.swift in Sources */,
 				E76C13611B24771A0066CCD8 /* Player.swift in Sources */,
 				E7A74E7C1B2322610051AA7A /* SecondViewController.swift in Sources */,
 				E7A74E781B2322610051AA7A /* AppDelegate.swift in Sources */,
 				E7CBD2601B27709000594569 /* CharacterSlot.swift in Sources */,
-				E76C135F1B2476F50066CCD8 /* PlayerManager.swift in Sources */,
+				E76C135F1B2476F50066CCD8 /* PlayerLoader.swift in Sources */,
 				E7A74E7A1B2322610051AA7A /* FirstViewController.swift in Sources */,
 				E7A74EA01B2359D80051AA7A /* SwiftyJSON.swift in Sources */,
 				E7A74EA71B23623C0051AA7A /* ConfigurationLoader.swift in Sources */,

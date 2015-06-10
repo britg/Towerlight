@@ -11,6 +11,11 @@ import RealmSwift
 
 class Player: Object {
 
+    dynamic var id = ""
     let characters = List<Character>()
+
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 
 }
