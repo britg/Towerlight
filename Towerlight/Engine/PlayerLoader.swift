@@ -12,41 +12,52 @@ import RealmSwift
 class PlayerLoader {
 
     var realm: Realm
+    var config: JSON?
+    var player: Player?
 
-    init () {
+    init (_ config: JSON) {
         realm = Realm()
+        self.config = config
     }
 
-    func getCurrentPlayerId () -> String? {
-        var playerId: String?
-        if let player = realm.objects(Player).first {
-            return player.id
+    func loadExistingPlayer () {
+        self.player = realm.objects(Player).first
+    }
+
+    func createNewPlayer () {
+        self.player = Player()
+    }
+
+    func loadExistingOrCreatePlayer () {
+        loadExistingPlayer()
+
+        if self.player == nil {
+            createNewPlayer()
         }
-        return playerId
     }
 
     func ensurePlayer () {
-
-        if let currentPlayerId = getCurrentPlayerId() {
-            log.info("Player exists \(currentPlayerId)")
-            return
-        }
-
-        let player = Player()
-        player.id = NSUUID().UUIDString
-        addCharacters(player)
+        loadExistingOrCreatePlayer()
+        generateCharacters()
 
         realm.write {
-            self.realm.add(player, update: false)
+            self.realm.add(self.player!, update: false)
         }
 
     }
 
-    func addCharacters (player: Player) {
+    func generateCharacters () {
+        let chars = self.config!["start_classes"].arrayObject as! [String]
+        for char in chars {
+            generateCharacter(char)
+        }
+    }
+
+    func generateCharacter (className: String) {
         let character = Character()
 
-        let charClass = realm.objects(CharacterClass).filter("key='warrior'")
+        let charClass = realm.objects(CharacterClass).filter("key='\(className)'")
         character.characterClass = charClass.first
-        player.characters.append(character)
+        self.player!.characters.append(character)
     }
 }

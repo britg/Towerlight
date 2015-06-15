@@ -15,16 +15,13 @@ class ConfigurationLoader {
     var loadedConfigs: [String: JSON] = [String: JSON]()
     var objs: [Model] = [Model]()
 
-    let configLoadingOrder = ["Stat", "Slot", "EquipmentClass", "CharacterClass"]
+    let configLoadingStages = [
+        0: ["Stat", "Slot", "EquipmentClass", "CharacterClass"],
+        1: ["PlayerConfig"]
+    ]
 
     func bootstrap () {
         loadConfiguration()
-        loadPlayer()
-    }
-
-    func loadPlayer () {
-        let playerLoader = PlayerLoader()
-        playerLoader.ensurePlayer()
     }
 
     func loadConfiguration () {
@@ -32,6 +29,11 @@ class ConfigurationLoader {
         let realm = Realm()
         log.info(realm.path)
 
+        loadConfigs()
+        parseConfigs()
+    }
+
+    func loadConfigs () {
         log.info("Loading all config files")
 
         let path = NSBundle.mainBundle().resourcePath!.stringByAppendingPathComponent("config")
@@ -46,14 +48,6 @@ class ConfigurationLoader {
                 loadFile(fullPath)
             }
         }
-
-        parseConfigs()
-
-        realm.write {
-            for obj in self.objs {
-                realm.add(obj, update: true)
-            }
-        }
     }
     
     func loadFile (path: String) {
@@ -66,9 +60,22 @@ class ConfigurationLoader {
     }
 
     func parseConfigs () {
-        for type in configLoadingOrder {
-            parseConfig(type, loadedConfigs[type]!)
+        for (stage, types) in configLoadingStages {
+            for type in types {
+                parseConfig(type, loadedConfigs[type]!)
+            }
+            flushObjects()
         }
+    }
+
+    func flushObjects () {
+        let realm = Realm()
+        realm.write {
+            for obj in self.objs {
+                realm.add(obj, update: true)
+            }
+        }
+        self.objs = []
     }
 
     func parseConfig (type: String, _ config: JSON) {
@@ -82,6 +89,8 @@ class ConfigurationLoader {
                 obj = Stat()
             case "CharacterClass":
                 obj = CharacterClass()
+            case "PlayerConfig":
+                loadPlayer(config)
             default:
                 log.info("type not defined \(type)")
         }
@@ -89,5 +98,10 @@ class ConfigurationLoader {
             obj!.build(config)
             objs.append(obj!)
         }
+    }
+
+    func loadPlayer (config: JSON) {
+        let playerLoader = PlayerLoader(config)
+        playerLoader.ensurePlayer()
     }
 }

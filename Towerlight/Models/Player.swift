@@ -11,7 +11,11 @@ import RealmSwift
 
 class Player: Object {
 
-    dynamic var id = ""
+    dynamic var id = NSUUID().UUIDString
+    dynamic var level = 1
+    dynamic var exp = 0
+    dynamic var floor = 1
+
     let characters = List<Character>()
 
     override class func primaryKey() -> String? {
